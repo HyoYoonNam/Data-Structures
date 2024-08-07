@@ -9,6 +9,8 @@
 > Both **Zoned Decimal** and **Packed Decimal** formats are types of BCD because they represent decimal digits in a binary form.  
   당연하게도 이 둘 외에도 더 있다.
 
+> Pretty much the only place you would see BCD these days is in some low level hardware where you want to read/x-mit a digit without using a microprocessor at all.
+
 
 ## Zoned-decimal format
 **Zoned-decimal format** means that each byte of storage can contain one digit or one character.  
@@ -67,7 +69,21 @@ In the zoned-decimal format, each byte of storage is divided into two portions: 
   - 그리고 마지막 자리가 아닌 나머지 자리는 모두 $`1111_{(2)}`$ 즉, $`F_{(16)}`$으로 채워주면 된다.
 * Ex1. $`+512_{(10)}`$ can be represented as $`F5\ F1\ C2_{(16)}`$ in zoned-decimal format(C for Positive sign).  
   Ex2. $`-512_{(10)}`$ can be represented as $`F5\ F1\ D2_{(16)}`$ in zoned-decimal format(D for Negative sign).
+> 이를 응용해서 생각해보면, C언어에서 `\0`을 만나면 string의 끝이라고 인식하듯이, `F`가 아닌 `C`나 `D`를 만나면 Decimal의 끝이라고 인식하는 용도로도 사용할 수 있겠다.
 
 
 ## Packed-decimal format
-
+* Zoned-decimal format의 예를 다시 보자.
+  - $`+512_{(10)}`$ can be represented as $`F5\ F1\ C2_{(16)}`$ in zoned-decimal format.
+  - 즉 F5 F1 C2와 같이 Zone-Digit  Zone-Digit  Zone-Digit으로 표현했다.
+  - Sign을 구분하기 위해서는 마지막 자릿수의 C(또는 D)만 존재하면 되기 때문에 나머지 F들은 waste라고 볼 수 있겠다.
+  - 따라서 이를 개선하여 Digit-Digit  Digit-Digit  Zone-Digit과 같이 표현할 수 있겠다.
+    (Zoned-decimal과 직관적으로 비교를 하기 위해서 위와 같이 작성했지만,
+    엄밀히 말하자면 Digit-Digit  Digit-Digit  Digit-Zone이다 즉, 마지막 4bit를 Sign bit로 사용한다.)
+  - 이를 실제로 Binary나 Hexadecimal로 표현하면 다음과 같다.
+    + $`+512_{(10)}`$ can be represented as $`5\ 1\ 2\ C_{(16)}`$ in packed-decimal format.  
+      $`+512_{(10)}`$ can be represented as $`0011\ 0001\ 0010\ 1100_{(2)}`$ in packed-decimal format.
+    + $`-512_{(10)}`$ can be represented as $`5\ 1\ 2\ D_{(16)}`$ in packed-decimal format.  
+      $`-512_{(10)}`$ can be represented as $`0011\ 0001\ 0010\ 1101_{(2)}`$ in packed-decimal format.
+> **Zoned-decimal format**에서는 Decimal 한 자리 표현을 위해서 8bit(4bit_Zone + 4bit_Digit)가 필요했지만,  
+**Packed-decimal format**에서는 Decimal 한 자리 표현을 위해서 4bit(4bit_Digit)만 필요하다(Sign 4bit는 별도로 생각).
