@@ -1,12 +1,9 @@
 # Data-Structures
 **Data Structures with C**
-* https://stackoverflow.com/questions/10538857/decimal-presentation-different-purpose-between-zoned-decimal-and-packed-decima
-* https://www.ibm.com/docs/en/i/7.4?topic=type-zoned-decimal-format
-* https://chatgpt.com/share/8396e293-f655-4144-a5ef-e5f99e4535ea
 
 
 # Topic
-* [zoned decimal과 packed decimal](https://github.com/rudevico/Data-Structures/blob/main/Binary-coded_decimal.md)
+* [Decimal을 Binary로 표현하는 방법: zoned decimal과 packed decimal](https://github.com/rudevico/Data-Structures/blob/main/Binary-coded_decimal.md)
 
 
 # References
