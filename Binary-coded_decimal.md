@@ -74,10 +74,10 @@ In the zoned-decimal format, each byte of storage is divided into two portions: 
 
 ## Packed-decimal format
 * Zoned-decimal format의 예를 다시 보자.
-  - $`+512_{(10)}`$ can be represented as $`F5\ F1\ C2_{(16)}`$ in zoned-decimal format.
+  - $`+512_{(10)}`$ can be represented as $`F5\ F1\ C2_{(16)}`$ in **zoned-decimal format**.
   - 즉 F5 F1 C2와 같이 Zone-Digit  Zone-Digit  Zone-Digit으로 표현했다.
   - Sign을 구분하기 위해서는 마지막 자릿수의 C(또는 D)만 존재하면 되기 때문에 나머지 F들은 waste라고 볼 수 있겠다.
-  - 따라서 이를 개선하여 Digit-Digit  Digit-Digit  Zone-Digit과 같이 표현할 수 있겠다.
+  - 따라서 이를 개선하여 Digit-Digit  Digit-Digit  Zone-Digit과 같이 표현할 수 있겠다. 이러면 Digit을 4bit*2 만큼이나 더 쓸 수 있다.
     (Zoned-decimal과 직관적으로 비교를 하기 위해서 위와 같이 작성했지만,
     엄밀히 말하자면 Digit-Digit  Digit-Digit  Digit-Zone이다 즉, 마지막 4bit를 Sign bit로 사용한다.)
   - 이를 실제로 Binary나 Hexadecimal로 표현하면 다음과 같다.
