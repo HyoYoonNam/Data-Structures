@@ -1,5 +1,14 @@
 # Data-Structures
-**Data Structures with C**
+**IDE**  
+* Visual Studio 2019 Community: Version 16.11.37  
+  Download: [here](https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=community&channel=Release&version=VS2019&source=VSLandingPage&cid=2030:6feb0e14a4d74763b1f3cf9e6a66f950)  
+  최근부터 Microsoft에서는 구버전의 legacy version을 다운로드하기 위해서는 microsoft 계정과 연동을 강제시한다.
+  ~~이를 무시하고 다운로드할 수 있던 방법이 있었는데 2024년 어느 시점부터 불가능해졌다.~~  
+  위 링크는 무시하고 다운로드할 수 있는 새로운 링크
+
+**Programming Language**  
+* C: C89/90, Legacy MSVC(VS2019 Default)
+* C++: ISO C++14 Standard(VS2019 Default)
 
 
 # Topic
