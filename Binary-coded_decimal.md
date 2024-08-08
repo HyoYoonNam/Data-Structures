@@ -2,6 +2,7 @@
 * [Binary-coded decimal](#binary-coded-decimal)
   - [Zoned-decimal format](#zoned-decimal-format)
   - [Packed-decimal format](#packed-decimal-format)
+* [Exercises](#exercises)
 
 
 # Binary-coded decimal
@@ -82,8 +83,23 @@ In the zoned-decimal format, each byte of storage is divided into two portions: 
     엄밀히 말하자면 Digit-Digit  Digit-Digit  Digit-Zone이다 즉, 마지막 4bit를 Sign bit로 사용한다.)
   - 이를 실제로 Binary나 Hexadecimal로 표현하면 다음과 같다.
     + $`+512_{(10)}`$ can be represented as $`5\ 1\ 2\ C_{(16)}`$ in packed-decimal format.  
-      $`+512_{(10)}`$ can be represented as $`0011\ 0001\ 0010\ 1100_{(2)}`$ in packed-decimal format.
+      $`+512_{(10)}`$ can be represented as $`0101\ 0001\ 0010\ 1100_{(2)}`$ in packed-decimal format.
     + $`-512_{(10)}`$ can be represented as $`5\ 1\ 2\ D_{(16)}`$ in packed-decimal format.  
-      $`-512_{(10)}`$ can be represented as $`0011\ 0001\ 0010\ 1101_{(2)}`$ in packed-decimal format.
+      $`-512_{(10)}`$ can be represented as $`0101\ 0001\ 0010\ 1101_{(2)}`$ in packed-decimal format.
 > **Zoned-decimal format**에서는 Decimal 한 자리 표현을 위해서 8bit(4bit_Zone + 4bit_Digit)가 필요했지만,  
 **Packed-decimal format**에서는 Decimal 한 자리 표현을 위해서 4bit(4bit_Digit)만 필요하다(Sign 4bit는 별도로 생각).
+
+
+# Exercises
+**excercise 1.**  
+다음을 Zoned-decimal format과 Packed-decimal format으로 convert하세요(binary=2진수와 hexadecimal=16진수 두 경우 모두 작성).  
+convert this: $+827_{(10)}$
+<details>
+  <summary><b>Answer</b></summary>
+  <ul>
+    <li>$+827_{(10)}$ can be represented as $F8\ F2\ C7_{(16)}$ in zoned-decimal format.</li>
+    <li>$+827_{(10)}$ can be represented as $1111\ 1000\ \ \ 1111\ 0010\ \ \ 1100\ 0111_{(2)}$ in zoned-decimal format.</li>
+    <li>$+827_{(10)}$ can be represented as $8\ 2\ 7\ C_{(16)}$ in packed-decimal format.</li>
+    <li>$+827_{(10)}$ can be represented as $1000\ 0010\ 0111\ 1100_{(2)}$ in zoned-decimal format.</li>
+  </ul>
+</details>
