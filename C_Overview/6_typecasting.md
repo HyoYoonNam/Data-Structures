@@ -1,3 +1,8 @@
+- 정수*정수 = 정수
+- 실수*실수 = 실수
+- 정수*실수 = 실수(이때 정수를 실수로 casting하고 연산을 진행 다만 **implicit**으로 casting by compiler)  
+    왜냐하면 char 1byte, int 4byte, double 8byte이기 때문에 연산시 byte가 맞지 않기 때문에 큰 애 기준으로 casting
+
 ```C
 // typecasting.c
 #include <stdio.h>
