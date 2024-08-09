@@ -123,12 +123,12 @@ int main(void) {
 
 	// bitwise NOT by Tilde(~)
 	// Output: ~ 00000009 = FFFFFFF6
-    // cf. bitwise NOT은 모든 bit를 반전시킨다,
-    // 따라서 2진수에서는 0 <-> 1로 서로 반전되고,
-    // 16진수에서는 0 <-> F로 서로 반전된다.
-    printf("~ %08b = %08b\n", x, ~x);			 // same as 0b0110
+    	// cf. bitwise NOT은 모든 bit를 반전시킨다,
+	// 따라서 2진수에서는 0 <-> 1로 서로 반전되고,
+	// 16진수에서는 0 <-> F로 서로 반전된다.
+	printf("~ %08b = %08b\n", x, ~x);			 // same as 0b0110
 
-    return 0;
+	return 0;
 }
 ```
 
