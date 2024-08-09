@@ -7,7 +7,7 @@ int main(void) { // return_value is integer, parameter is void
 
     return 0;
 ```
-
+* * *
 > 다음 코드와 같이 `#include <stdio.h>`를 comment하면 error가 발생한다.  
 이유는 `printf()`는 stdio.h header file에서 define된 function이기 때문.
 
