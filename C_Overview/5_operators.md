@@ -1,5 +1,5 @@
 ```C
-// arithmetic_operator.cㄴ
+// arithmetic_operator.c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
