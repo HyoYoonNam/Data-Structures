@@ -151,4 +151,5 @@ int main(void) {
 	return 0;
 }
 ```
-![Bitwise Operator]()
+![Bitwise Operator](/C_Overview/5_Images/Image1.JPG)  
+*Bit Shift*
