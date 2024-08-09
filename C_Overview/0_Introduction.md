@@ -22,3 +22,5 @@
 | ----------------------------- | --------------------------- |
 | keyword                       | same as reserved word       |
 | format specifier              | `%d`, `%c`, ...             |
+| ampersand                     | &                           |
+| asterisk                      | *                           |
