@@ -103,3 +103,16 @@ convert this: $+827_{(10)}$
     <li>$+827_{(10)}$ can be represented as $1000\ 0010\ 0111\ 1100_{(2)}$ in zoned-decimal format.</li>
   </ul>
 </details>
+
+**excercise 2.**  
+다음을 Zoned-decimal format과 Packed-decimal format으로 convert하세요(binary=2진수와 hexadecimal=16진수 두 경우 모두 작성).  
+convert this: $-591_{(10)}$
+<details>
+  <summary><b>Answer</b></summary>
+  <ul>
+    <li>$-591_{(10)}$ can be represented as $F5\ F9\ D1_{(16)}$ in zoned-decimal format.</li>
+    <li>$-591_{(10)}$ can be represented as $1111\ 0101\ \ \ 1111\ 1001\ \ \ 1101\ 0001_{(2)}$ in zoned-decimal format.</li>
+    <li>$-591_{(10)}$ can be represented as $5\ 9\ 1\ D_{(16)}$ in packed-decimal format.</li>
+    <li>$-591_{(10)}$ can be represented as $0101\ 1001\ 0001\ 1101_{(2)}$ in zoned-decimal format.</li>
+  </ul>
+</details>
